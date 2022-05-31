@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements Example_Dialog.Ex
     ImageView setting;
     TextView homeUrl,aboutUrl,updateUrl;
     int keyPassword;
-
+    Intent intent1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements Example_Dialog.Ex
             @Override
             public void onClick(View view) {
                 String data1="https://krishworks.com/";
-                Intent intent1=new Intent(MainActivity.this,MainActivity.class);
+                intent1=new Intent(MainActivity.this,MainActivity.class);
                 intent1.putExtra("url1",data1);
                 startActivity(intent1);
             }
@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity implements Example_Dialog.Ex
             @Override
             public void onClick(View view) {
                 String data2="https://krishworks.com/about/";
-                Intent intent2=new Intent(MainActivity.this,MainActivity.class);
-                intent2.putExtra("url2",data2);
-                startActivity(intent2);
+                intent1=new Intent(MainActivity.this,MainActivity.class);
+                intent1.putExtra("url2",data2);
+                startActivity(intent1);
             }
         });
 
@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity implements Example_Dialog.Ex
             @Override
             public void onClick(View view) {
                 String data3="https://krishworks.com/updates/";
-                Intent intent3=new Intent(MainActivity.this,MainActivity.class);
-                intent3.putExtra("url3",data3);
-                startActivity(intent3);
+                intent1=new Intent(MainActivity.this,MainActivity.class);
+                intent1.putExtra("url3",data3);
+                startActivity(intent1);
             }
         });
 
